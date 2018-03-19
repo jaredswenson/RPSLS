@@ -59,9 +59,10 @@ $(document).ready(function () {
 	    },
 	    checkPlay: function () {
 	    	var _this = this;
-	    	//player one winners
+	    	//tie
 	    	if (_this.playerOne === _this.playerTwo) {
-	    		_this.result = "TIE"
+	    		_this.winner = "TIE"
+	    	//player one winners
 	    	} else if (_this.playerOne === "Rock" && _this.playerTwo === "Scissors") {
 	    		_this.result = "(and as it always has) Rock crushes Scissors"
 	    		_this.winner = "Player One";

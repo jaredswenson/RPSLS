@@ -19,3 +19,7 @@ body{
 img{
 	border-radius: .25rem;
 }
+
+#winner{
+	margin-top: 15px;
+}

@@ -4,14 +4,22 @@ $(document).ready(function () {
 	  data: {
 	    playerOne: '',
 	    playerOnePlayed: false,
+	    playerOneName: '',
 	    playerTwo: '',
 	    playerTwoPlayed: false,
+	    playerTwoName: '',
 	    result: "",
 	    winner: "",
 	    playerOneTotal: 0,
 	    playerTwoTotal: 0,
 	  },
 	    methods: {
+	    startGame: function () {
+	    	var playerOne = $('#playerOneName').val();
+	    	this.playerOneName = playerOne;
+	    	var playerTwo = $('#playerTwoName').val();
+	    	this.playerTwoName = playerTwo;
+	    },
 	    setPlayerOneToRock: function () {
 	      this.playerOne = "Rock";
 	      this.playerOnePlayed = true;

@@ -10,31 +10,54 @@
 	<link rel="stylesheet" type="text/css" href="index.css">
 </head>
 <body>
-	<div id="app">
-		<div>
-			Player One: {{playerOneTotal}} - Player Two: {{playerTwoTotal}}
+	<div id="app" class="row">
+		<div v-if="!playerOneName && !playerTwoName" class="col-12" align="center">
+			<label>Player One Name</label><br>
+			<input type="text" name="" id="playerOneName"> <br>
+			<label>Player Two Name</label><br>
+			<input type="text" name="" id="playerTwoName"> <br> <br>
+			<button class="btn btn-success" v-on:click="startGame">Start</button>
 		</div>
-	  <p>{{ playerOne }}</p>
-	  <button class="btn btn-warning" v-on:click="setPlayerOneToRock"><img src="rock.png"><br>Rock</button>
-	  <button class="btn btn-warning" v-on:click="setPlayerOneToPaper"><img src="paper.png"><br>Paper</button>
-	  <button class="btn btn-warning" v-on:click="setPlayerOneToScissors"><img src="scissors.png"><br>Scissors</button>
-	  <button class="btn btn-warning" v-on:click="setPlayerOneToLizard"><img src="lizard.png"><br>Lizard</button>
-	  <button class="btn btn-warning" v-on:click="setPlayerOneToSpock"><img src="spock.png"><br>Spock</button>
-	  <br>
-	  <div v-if="playerOnePlayed">
-	  <p>{{ playerTwo }}</p>
-		  <button class="btn btn-primary" v-on:click="setPlayerTwoToRock"><img src="rock.png"><br>Rock</button>
-		  <button class="btn btn-primary" v-on:click="setPlayerTwoToPaper"><img src="paper.png"><br>Paper</button>
-		  <button class="btn btn-primary" v-on:click="setPlayerTwoToScissors"><img src="scissors.png"><br>Scissors</button>
-		  <button class="btn btn-primary" v-on:click="setPlayerTwoToLizard"><img src="lizard.png"><br>Lizard</button>
-		  <button class="btn btn-primary" v-on:click="setPlayerTwoToSpock"><img src="spock.png"><br>Spock</button>
-	  </div>
-	  <p>{{result}}</p>
-	  
-	  <div v-if="winner">
-	  	<p>Winner: {{winner}}</p>
-	  	<button class="btn btn-dark" v-on:click="reset">Reset</button>
-	  </div>
+		<div v-if="playerOneName && playerTwoName" class="col-12 row" align="center">
+			<div class="col-12" align="center">
+				<h3>{{playerOneName}}: {{playerOneTotal}} - {{playerTwoName}}: {{playerTwoTotal}}</h3>
+			</div>
+		  <div v-if="!playerOne" class="col-12" align="center">
+		  	  <button class="btn btn-warning" v-on:click="setPlayerOneToRock"><img src="rock.png"><br>Rock</button>
+			  <button class="btn btn-warning" v-on:click="setPlayerOneToPaper"><img src="paper.png"><br>Paper</button>
+			  <button class="btn btn-warning" v-on:click="setPlayerOneToScissors"><img src="scissors.png"><br>Scissors</button>
+			  <button class="btn btn-warning" v-on:click="setPlayerOneToLizard"><img src="lizard.png"><br>Lizard</button>
+			  <button class="btn btn-warning" v-on:click="setPlayerOneToSpock"><img src="spock.png"><br>Spock</button>
+		  </div>
+		  <div v-if="playerOne && playerTwo" class="col-4" align="center">
+		  	  <button v-if="playerOne === 'Rock'" class="btn btn-warning playerOnePick"><img src="rock.png"><br>Rock</button>
+			  <button v-if="playerOne === 'Paper'" class="btn btn-warning playerOnePick"><img src="paper.png"><br>Paper</button>
+			  <button v-if="playerOne === 'Scissors'" class="btn btn-warning playerOnePick"><img src="scissors.png"><br>Scissors</button>
+			  <button v-if="playerOne === 'Lizard'" class="btn btn-warning playerOnePick"><img src="lizard.png"><br>Lizard</button>
+			  <button v-if="playerOne === 'Spock'" class="btn btn-warning playerOnePick"><img src="spock.png"><br>Spock</button>
+		  </div>
+		  <div v-if="playerOnePlayed && !playerTwo" class="col-12" align="center">
+			  <button class="btn btn-primary" v-on:click="setPlayerTwoToRock"><img src="rock.png"><br>Rock</button>
+			  <button class="btn btn-primary" v-on:click="setPlayerTwoToPaper"><img src="paper.png"><br>Paper</button>
+			  <button class="btn btn-primary" v-on:click="setPlayerTwoToScissors"><img src="scissors.png"><br>Scissors</button>
+			  <button class="btn btn-primary" v-on:click="setPlayerTwoToLizard"><img src="lizard.png"><br>Lizard</button>
+			  <button class="btn btn-primary" v-on:click="setPlayerTwoToSpock"><img src="spock.png"><br>Spock</button>
+		  </div>
+		  
+		  
+		  <div v-if="winner" class="col-4" id="winner" align="center">
+		  	<h3>{{result}}</h3>
+		  	<h3>Winner: {{winner}}</h3>
+		  	<button class="btn btn-dark" v-on:click="reset">New Game</button>
+		  </div>
+		  <div v-if="playerTwo && playerOne" class="col-4" align="center">
+		  	  <button v-if="playerTwo === 'Rock'" class="btn btn-primary playerTwoPick"><img src="rock.png"><br>Rock</button>
+			  <button v-if="playerTwo === 'Paper'" class="btn btn-primary playerTwoPick"><img src="paper.png"><br>Paper</button>
+			  <button v-if="playerTwo === 'Scissors'" class="btn btn-primary playerTwoPick"><img src="scissors.png"><br>Scissors</button>
+			  <button v-if="playerTwo === 'Lizard'" class="btn btn-primary playerTwoPick"><img src="lizard.png"><br>Lizard</button>
+			  <button v-if="playerTwo === 'Spock'" class="btn btn-primary playerTwoPick"><img src="spock.png"><br>Spock</button>
+		  </div>
+		</div>
 	</div>
 </body>
 </html>

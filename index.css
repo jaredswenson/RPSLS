@@ -6,12 +6,12 @@ body{
 	color: white;
 }
 
-.btn-warning{
+.playerOneBtn{
 	height: 150px;
 	width: 150px;
 }
 
-.btn-primary{
+.playerTwoBtn{
 	height: 150px;
 	width: 150px;
 }

@@ -5,3 +5,13 @@ body{
 	background-color: #500000;
 	color: white;
 }
+
+.btn-warning{
+	height: 150px;
+	width: 150px;
+}
+
+.btn-primary{
+	height: 150px;
+	width: 150px;
+}

@@ -46,8 +46,10 @@
 		  
 		  
 		  <div v-if="winner" class="col-4" id="winner" align="center">
-		  	<h3>{{result}}</h3>
-		  	<h3>Winner: {{winner}}</h3>
+		  	<img src="bazinga.jpg" v-if="winner === 'TIE'" id="bazinga">
+		  	<h3 v-if="winner == 'TIE'">{{winner}}</h3>
+		  	<h3 v-if="winner != 'TIE'">{{result}}</h3>
+		  	<h3 v-if="winner != 'TIE'">Winner: {{winner}}</h3>
 		  	<button class="btn btn-dark" v-on:click="reset">New Game</button>
 		  </div>
 		  <div v-if="playerTwo && playerOne" class="col-4" align="center">

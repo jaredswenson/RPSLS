@@ -4,10 +4,10 @@ $(document).ready(function () {
 	  data: {
 	    playerOne: '',
 	    playerOnePlayed: false,
-	    playerOneName: '',
+	    playerOneName: 'Jared',
 	    playerTwo: '',
 	    playerTwoPlayed: false,
-	    playerTwoName: '',
+	    playerTwoName: 'Crys',
 	    result: "",
 	    winner: "",
 	    playerOneTotal: 0,

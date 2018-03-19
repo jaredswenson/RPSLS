@@ -2,9 +2,9 @@ $(document).ready(function () {
 	var app = new Vue({
 	  el: '#app',
 	  data: {
-	    playerOne: 'Player One!',
+	    playerOne: '',
 	    playerOnePlayed: false,
-	    playerTwo: 'Player Two!',
+	    playerTwo: '',
 	    playerTwoPlayed: false,
 	    result: "",
 	    winner: "",
@@ -148,8 +148,8 @@ $(document).ready(function () {
 			}
 	    },
 	    reset: function () {
-	    	this.playerOne = "Player One!";
-	    	this.playerTwo = "Player Two!";
+	    	this.playerOne = "";
+	    	this.playerTwo = "";
 	    	this.result = "";
 	    	this.winner = "";
 	      	this.playerOnePlayed = false;

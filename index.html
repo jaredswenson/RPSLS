@@ -20,7 +20,8 @@
 		</div>
 		<div v-if="playerOneName && playerTwoName" class="col-12 row" align="center">
 			<div class="col-12" align="center">
-				<h3><button class="btn btn-warning">{{playerOneName}}:</button> {{playerOneTotal}} - <button class="btn btn-primary">{{playerTwoName}}:</button>{{playerTwoTotal}}</h3>
+				<h3>Scoreboard</h3>
+				<h3><button class="btn btn-warning">{{playerOneName}}:</button> {{playerOneTotal}} - <button class="btn btn-primary">{{playerTwoName}}:</button> {{playerTwoTotal}}</h3>
 			</div>
 		  <div v-if="!playerOne" class="col-12" align="center">
 		  	  <button class="btn btn-warning playerOneBtn" v-on:click="setPlayerOneToRock"><img src="rock.png"><br>Rock</button>
@@ -49,7 +50,7 @@
 		  	<img src="bazinga.jpg" v-if="winner === 'TIE'" id="bazinga">
 		  	<h3 v-if="winner == 'TIE'">{{winner}}</h3>
 		  	<h3 v-if="winner != 'TIE'">{{result}}</h3>
-		  	<h3 v-if="winner != 'TIE'">Winner: {{winner}}</h3>
+		  	<h3 v-if="winner != 'TIE'">Winner: {{winner}}!</h3>
 		  	<button class="btn btn-dark" v-on:click="reset">New Game</button>
 		  </div>
 		  <div v-if="playerTwo && playerOne" class="col-4" align="center">

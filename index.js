@@ -73,85 +73,85 @@ $(document).ready(function () {
 	    	//player one winners
 	    	} else if (_this.playerOne === "Rock" && _this.playerTwo === "Scissors") {
 	    		_this.result = "(and as it always has) Rock crushes Scissors"
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Rock" && _this.playerTwo === "Lizard") {
 	    		_this.result = "Rock crushes Lizard";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Paper" && _this.playerTwo === "Rock") {
 				_this.result = "Paper covers Rock";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Paper" && _this.playerTwo === "Spock") {
 				_this.result = "Paper disproves Spock";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Scissors" && _this.playerTwo === "Paper") {
 				_this.result = "Scissors cuts Paper";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Scissors" && _this.playerTwo === "Lizard") {
 				_this.result = "Scissors decapitates Lizard";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Lizard" && _this.playerTwo === "Spock") {
 				_this.result = "Lizard poisons Spock";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Lizard" && _this.playerTwo === "Paper") {
 				_this.result = "Lizard eats Paper";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Spock" && _this.playerTwo === "Scissors") {
 				_this.result = "Spock smashes Scissors";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	} else if(_this.playerOne === "Spock" && _this.playerTwo === "Rock") {
 				_this.result = "Spock vaporizes Rock";
-	    		_this.winner = "Player One";
+	    		_this.winner = _this.playerOneName;
 	    		_this.playerOneTotal = _this.playerOneTotal +1;
 	    	}
 	    	//player two winners
 	    	else if (_this.playerTwo === "Rock" && _this.playerOne === "Scissors") {
 				_this.result = "(and as it always has) Rock crushes Scissors"
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Rock" && _this.playerOne === "Lizard") {
 				_this.result = "Rock crushes Lizard";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Paper" && _this.playerOne === "Rock") {
 				_this.result = "Paper covers Rock";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Paper" && _this.playerOne === "Spock") {
 				_this.result = "Paper disproves Spock";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Scissors" && _this.playerOne === "Paper") {
 				_this.result = "Scissors cuts Paper";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Scissors" && _this.playerOne === "Lizard") {
 				_this.result = "Scissors decapitates Lizard";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Lizard" && _this.playerOne === "Spock") {
 				_this.result = "Lizard poisons Spock";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Lizard" && _this.playerOne === "Paper") {
 				_this.result = "Lizard eats Paper";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Spock" && _this.playerOne === "Scissors") {
 				_this.result = "Spock smashes Scissors";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			} else if(_this.playerTwo === "Spock" && _this.playerOne === "Rock") {
 				_this.result = "Spock vaporizes Rock";
-				_this.winner = "Player Two";
+				_this.winner = _this.playerTwoName;
 				_this.playerTwoTotal = _this.playerTwoTotal +1;
 			}
 	    },

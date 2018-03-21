@@ -161,7 +161,13 @@ $(document).ready(function () {
 	    	this.result = "";
 	    	this.winner = "";
 	      	this.playerOnePlayed = false;
-	    }
+	    },
+	    quitGame: function () {
+	    	this.playerOneName = "";
+	    	this.playerTwoName = "";
+	    	this.playerOneTotal = 0;
+	    	this.playerTwoTotal = 0;
+	    },
 	  }
 	})
 })
